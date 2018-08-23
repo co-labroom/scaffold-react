@@ -1,0 +1,45 @@
+@import "normalize";
+@import "variable";
+@import "icons";
+
+html,
+body {
+  font-family: "Microsoft Yahei", "微软雅黑", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.1;
+  color: #333;
+  height: 100%;
+}
+
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.clear {
+  zoom: 1;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+a {
+  color: #333;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
