@@ -4,16 +4,11 @@
 const asyncActionFactry = Symbol("asyncActionFactry");
 
 export default class Model {
-  static getInstance = (function() {
-    let instance;
-    return function(clazz) {
-      if (!instance) {
-        instance = new clazz();
-        instance.createActions();
-      }
-      return instance;
-    };
-  })();
+  static getInstance = function(clazz) {
+    const instance = new clazz();
+    instance.createActions();
+    return instance;
+  };
 
   [asyncActionFactry](asyncFunc) {
     return function() {
